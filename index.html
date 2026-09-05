@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Shivani 🎂</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #090914;
+    color: white;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* BACKGROUND */
+
+.bg {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(139,92,246,.25), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(236,72,153,.20), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(59,130,246,.15), transparent 35%),
+        #090914;
+}
+
+.orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: .25;
+    z-index: -1;
+    animation: float 8s ease-in-out infinite;
+}
+
+.orb.one {
+    width: 180px;
+    height: 180px;
+    background: #a855f7;
+    top: 10%;
+    left: -50px;
+}
+
+.orb.two {
+    width: 220px;
+    height: 220px;
+    background: #ec4899;
+    right: -70px;
+    top: 45%;
+    animation-delay: 2s;
+}
+
+.orb.three {
+    width: 160px;
+    height: 160px;
+    background: #3b82f6;
+    bottom: 5%;
+    left: 40%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%,100% { transform: translate(0,0); }
+    50% { transform: translate(30px,-30px); }
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50px;
+    background: rgba(255,255,255,.07);
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(60px, 14vw, 150px);
+    line-height: .85;
+    letter-spacing: -7px;
+    background: linear-gradient(120deg,#fff,#d8b4fe,#f9a8d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero h2 {
+    margin-top: 30px;
+    font-size: clamp(22px,5vw,40px);
+    font-weight: 500;
+}
+
+.hero p {
+    margin: 20px auto 35px;
+    max-width: 600px;
+    color: #aaa;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    padding: 15px 25px;
+    border-radius: 50px;
+    color: white;
+    background: linear-gradient(100deg,#8b5cf6,#ec4899);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 35px rgba(139,92,246,.25);
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+.scroll {
+    position: absolute;
+    bottom: 25px;
+    font-size: 12px;
+    color: #777;
+    letter-spacing: 2px;
+}
+
+/* HEADINGS */
+
+.label {
+    color: #c084fc;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(35px,7vw,65px);
+    line-height: 1;
+    margin-bottom: 35px;
+}
+
+/* NEWS */
+
+.news-box {
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(255,255,255,.055);
+    border-radius: 25px;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 30px 80px rgba(0,0,0,.3);
+}
+
+.news-top {
+    padding: 13px 18px;
+    background: #ef4444;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+.news-content {
+    padding: 35px;
+}
+
+.news-content h4 {
+    font-family: 'Space Grotesk';
+    font-size: clamp(27px,5vw,48px);
+    margin-bottom: 20px;
+}
+
+.news-content p {
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* FILE */
+
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+
+.file-card {
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.1);
+}
+
+.file-card span {
+    display: block;
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.file-card strong {
+    font-size: 19px;
+}
+
+/* STATS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+
+.stat {
+    padding: 30px 20px;
+    border-radius: 20px;
+    background: linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
+    border: 1px solid rgba(255,255,255,.1);
+}
+
+.number {
+    font-family: 'Space Grotesk';
+    font-size: 42px;
+    font-weight: 700;
+    background: linear-gradient(90deg,#c084fc,#f9a8d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat p {
+    margin-top: 7px;
+    color: #999;
+    font-size: 14px;
+}
+
+/* ROAST */
+
+.roasts {
+    display: grid;
+    gap: 15px;
+}
+
+.roast {
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(255,255,255,.055);
+    border: 1px solid rgba(255,255,255,.08);
+    transition: .3s;
+}
+
+.roast:hover {
+    transform: translateX(8px);
+    border-color: rgba(192,132,252,.4);
+}
+
+.roast-number {
+    color: #a78bfa;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.roast h4 {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.roast p {
+    color: #999;
+    line-height: 1.6;
+}
+
+/* TERMINAL */
+
+.terminal {
+    background: #050507;
+    border: 1px solid #222;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,.4);
+}
+
+.terminal-head {
+    padding: 12px 17px;
+    background: #111;
+    color: #777;
+    font-size: 12px;
+}
+
+.terminal-body {
+    padding: 25px;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 2;
+    color: #b9fbc0;
+}
+
+.error {
+    color: #ff7b9c;
+}
+
+.warning {
+    color: #fcd34d;
+}
+
+/* ACHIEVEMENTS */
+
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+
+.achievement {
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.055);
+    border: 1px solid rgba(255,255,255,.1);
+}
+
+.achievement .icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.achievement h4 {
+    margin-bottom: 7px;
+}
+
+.achievement p {
+    color: #888;
+    font-size: 14px;
+}
+
+/* FINAL */
+
+.final {
+    text-align: center;
+}
+
+.final h3 {
+    font-size: clamp(45px,10vw,100px);
+    background: linear-gradient(100deg,#fff,#f0abfc,#f9a8d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.final-message {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.restart {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.2);
+}
+
+/* MUSIC */
+
+.music-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(20,20,30,.8);
+    backdrop-filter: blur(12px);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+.music-btn.playing {
+    animation: musicPulse 1.2s infinite;
+}
+
+@keyframes musicPulse {
+    50% { transform: scale(1.1); }
+}
+
+/* CONFETTI */
+
+.confetti {
+    position: fixed;
+    width: 7px;
+    height: 13px;
+    top: -20px;
+    z-index: 30;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    section {
+        padding: 70px 17px;
+    }
+
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+
+    .file-grid,
+    .stats,
+    .achievements {
+        grid-template-columns: 1fr;
+    }
+
+    .news-content {
+        padding: 25px;
+    }
+
+    .terminal-body {
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="orb one"></div>
+<div class="orb two"></div>
+<div class="orb three"></div>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+    <source src="birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">♫</button>
+
+<!-- HERO -->
+
+<section class="hero" id="top">
+
+    <div class="container">
+
+        <div class="badge">A VERY IMPORTANT PUBLIC ANNOUNCEMENT</div>
+
+        <h1>SHIVANI</h1>
+
+        <h2>has somehow survived another year.</h2>
+
+        <p>
+            Nobody knows how. Nobody knows why.
+            But apparently we're celebrating it.
+        </p>
+
+        <button class="btn" onclick="startExperience()">
+            ENTER THE INCIDENT →
+        </button>
+
+    </div>
+
+    <div class="scroll">SCROLL AT YOUR OWN RISK ↓</div>
+
+</section>
+
+
+<!-- NEWS -->
+
+<section>
+
+<div class="container">
+
+<div class="label">01 / BREAKING NEWS</div>
+
+<h3>We have a situation.</h3>
+
+<div class="news-box">
+
+<div class="news-top">
+🚨 BREAKING NEWS — THIS IS NOT A DRILL
+</div>
+
+<div class="news-content">
+
+<h4>
+LOCAL WOMAN TURNS ONE YEAR OLDER
+</h4>
+
+<p>
+Authorities have confirmed that Shivani has successfully
+completed another year of existence. Witnesses describe
+the event as “unexpected but apparently inevitable.”
+Friends and family have been advised to remain calm.
+</p>
+
+<br>
+
+<p>
+Further investigation has revealed absolutely no evidence
+that becoming older has resulted in becoming wiser.
+</p>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FILE -->
+
+<section>
+
+<div class="container">
+
+<div class="label">02 / CLASSIFIED</div>
+
+<h3>The Shivani File.</h3>
+
+<div class="file-grid">
+
+<div class="file-card">
+<span>Subject</span>
+<strong>Shivani</strong>
+</div>
+
+<div class="file-card">
+<span>Occupation</span>
+<strong>Being herself</strong>
+</div>
+
+<div class="file-card">
+<span>Status</span>
+<strong>Still functioning</strong>
+</div>
+
+<div class="file-card">
+<span>Threat level</span>
+<strong>Depends on mood</strong>
+</div>
+
+<div class="file-card">
+<span>Known weakness</span>
+<strong>Logic</strong>
+</div>
+
+<div class="file-card">
+<span>Special ability</span>
+<strong>Making things unnecessarily interesting</strong>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section>
+
+<div class="container">
+
+<div class="label">03 / SCIENCE</div>
+
+<h3>Scientifically verified facts.</h3>
+
+<div class="stats">
+
+<div class="stat">
+<div class="number">87%</div>
+<p>Probability of Shivani having an opinion.</p>
+</div>
+
+<div class="stat">
+<div class="number">100%</div>
+<p>Confidence with which she delivers it.</p>
+</div>
+
+<div class="stat">
+<div class="number">0%</div>
+<p>Chance of admitting she's wrong immediately.</p>
+</div>
+
+<div class="stat">
+<div class="number">∞</div>
+<p>Number of unnecessary conversations generated.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ROAST -->
+
+<section>
+
+<div class="container">
+
+<div class="label">04 / EVIDENCE</div>
+
+<h3>Things Shivani does.</h3>
+
+<div class="roasts">
+
+<div class="roast">
+<div class="roast-number">01</div>
+<h4>Has an opinion on everything.</h4>
+<p>
+Nobody requested one. Nobody escaped one.
+Yet somehow, there it is.
+</p>
+</div>
+
+<div class="roast">
+<div class="roast-number">02</div>
+<h4>Remembers everything.</h4>
+<p>
+You can forget what you said five minutes ago.
+Shivani cannot. She has apparently been keeping records.
+</p>
+</div>
+
+<div class="roast">
+<div class="roast-number">03</div>
+<h4>Turns simple conversations into investigations.</h4>
+<p>
+A normal person hears a story and moves on.
+Shivani requires background information, context,
+evidence and possibly three witnesses.
+</p>
+</div>
+
+<div class="roast">
+<div class="roast-number">04</div>
+<h4>Gives advice like an expert.</h4>
+<p>
+Following her own advice, however, remains an optional feature.
+</p>
+</div>
+
+<div class="roast">
+<div class="roast-number">05</div>
+<h4>Somehow always knows what's happening.</h4>
+<p>
+At this point we're not sure if she's curious,
+observant or simply running background surveillance.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SYSTEM -->
+
+<section>
+
+<div class="container">
+
+<div class="label">05 / SYSTEM DIAGNOSTICS</div>
+
+<h3>Shivani.exe</h3>
+
+<div class="terminal">
+
+<div class="terminal-head">
+SHIVANI OPERATING SYSTEM — SYSTEM DIAGNOSTICS
+</div>
+
+<div class="terminal-body">
+
+> Initializing Shivani.exe...<br>
+> Loading personality... ██████████ 100%<br>
+> Loading attitude... ██████████ 100%<br>
+> Loading unnecessary opinions... ██████████ 100%<br>
+> Loading patience... ██░░░░░░░░ 17%<br>
+> Loading ability to mind her own business...<br>
+
+<span class="error">
+ERROR: FILE NOT FOUND
+</span><br>
+
+> Searching for common sense...<br>
+
+<span class="warning">
+WARNING: LIMITED AVAILABILITY
+</span><br>
+
+> Checking birthday status...<br>
+> Birthday detected.<br>
+> Cake protocol activated.<br>
+> Celebration protocol activated.<br>
+> Embarrassment protocol activated.<br>
+
+<br>
+
+<span class="warning">
+SYSTEM STATUS: SOMEHOW FUNCTIONING.
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+
+<section>
+
+<div class="container">
+
+<div class="label">06 / ACHIEVEMENTS</div>
+
+<h3>Unlocked this year.</h3>
+
+<div class="achievements">
+
+<div class="achievement">
+<div class="icon">🏆</div>
+<h4>Survived Another Year</h4>
+<p>Against all odds, the sequel has been released.</p>
+</div>
+
+<div class="achievement">
+<div class="icon">🧠</div>
+<h4>Professional Overthinker</h4>
+<p>Because apparently thinking once wasn't enough.</p>
+</div>
+
+<div class="achievement">
+<div class="icon">🎤</div>
+<h4>Unsolicited Advice Specialist</h4>
+<p>Certified to provide opinions nobody ordered.</p>
+</div>
+
+<div class="achievement">
+<div class="icon">🔥</div>
+<h4>Professional Menace</h4>
+<p>Somehow still allowed to interact with society.</p>
+</div>
+
+<div class="achievement">
+<div class="icon">😂</div>
+<h4>Conversation Destroyer</h4>
+<p>Can turn a normal conversation into complete nonsense.</p>
+</div>
+
+<div class="achievement">
+<div class="icon">👑</div>
+<h4>Best Friend Status</h4>
+<p>Somehow earned this despite all available evidence.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+<div class="container">
+
+<div class="label">07 / FINAL REPORT</div>
+
+<h3>Happy Birthday,<br>Shivani! 🎂</h3>
+
+<p class="final-message">
+
+You've successfully completed another year of existence,
+and somehow you've managed to remain just as chaotic,
+opinionated and entertaining as ever.
+
+So here's to another year of questionable decisions,
+ridiculous conversations, unnecessary arguments,
+and memories that will probably be used against you later.
+
+Stay exactly the same.
+
+It makes the roasting much easier.
+
+<br><br>
+
+<strong>Happy Birthday, idiot. ❤️</strong>
+
+</p>
+
+<button class="btn restart" onclick="location.href='#top'">
+↻ RESTART SHIVANI.EXE
+</button>
+
+</div>
+
+</section>
+
+
+<script>
+
+const music = document.getElementById("music");
+const musicBtn = document.getElementById("musicBtn");
+
+function toggleMusic() {
+
+    if (music.paused) {
+        music.play();
+        musicBtn.innerHTML = "❚❚";
+        musicBtn.classList.add("playing");
+    } else {
+        music.pause();
+        musicBtn.innerHTML = "♫";
+        musicBtn.classList.remove("playing");
+    }
+
+}
+
+function startExperience() {
+
+    document.querySelector("section:nth-of-type(2)")
+        .scrollIntoView({ behavior: "smooth" });
+
+    createConfetti();
+
+}
+
+function createConfetti() {
+
+    for (let i = 0; i < 90; i++) {
+
+        const piece = document.createElement("div");
+
+        piece.classList.add("confetti");
+
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.animationDuration =
+            (Math.random() * 3 + 2) + "s";
+
+        piece.style.animationDelay =
+            Math.random() * 1.5 + "s";
+
+        piece.style.transform =
+            `rotate(${Math.random() * 360}deg)`;
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+            piece.remove();
+        }, 6000);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
